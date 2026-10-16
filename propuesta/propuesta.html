@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Propuesta página web · La Gambeta Gym</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+/* Propuesta impresa A4: portada e inversión en negro de marca, páginas de lectura en claro */
+@page{size:A4;margin:0}
+:root{
+  --ink:#08070c; --ink2:#14121c; --paper:#f7f6fa; --line:#e3e0ea; --mute:#6b6680;
+  --violet:#a855f7; --violet-d:#7c3aed; --neon:#3ee68a; --green-d:#15803d; --lime:#9be22d;
+  --f-d:"Big Shoulders Display","Arial Narrow",Impact,sans-serif; --f-b:"Barlow",Arial,sans-serif; --f-l:"Barlow Condensed","Arial Narrow",sans-serif;
+  --ring:conic-gradient(#ff2d2d,#ffcc00 40deg,#22c55e 95deg,#ffd000 140deg,#ff6a00 175deg,#ff2d95 210deg,#3b82f6 250deg,#22d3ee 285deg,#a855f7 320deg,#ff2d2d);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff}
+body{font-family:var(--f-b);color:var(--ink2);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{position:relative;width:210mm;height:297mm;overflow:hidden;page-break-after:always;break-after:page;background:var(--paper);padding:20mm 18mm 18mm}
+.page:last-child{page-break-after:auto;break-after:auto}
+h1,h2,h3{font-family:var(--f-d);text-transform:uppercase;margin:0;line-height:.92;letter-spacing:.005em}
+.eyebrow{font-family:var(--f-l);font-weight:700;text-transform:uppercase;letter-spacing:.22em;font-size:9.5pt;color:var(--violet-d);margin:0 0 3mm}
+p{margin:0}
+.foot{position:absolute;left:18mm;right:18mm;bottom:9mm;display:flex;justify-content:space-between;font-family:var(--f-l);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:7.5pt;color:var(--mute)}
+.ring{border-radius:50%;padding:1.2mm;background:var(--ring)}
+.ring img{display:block;width:100%;height:100%;border-radius:50%}
+
+/* ---------- Portada ---------- */
+.cover{background:radial-gradient(60% 45% at 80% 18%,rgba(168,85,247,.38),transparent 70%),radial-gradient(45% 35% at 10% 95%,rgba(62,230,138,.16),transparent 70%),var(--ink);color:#f3f1f7;padding:18mm}
+.cover .top{display:flex;align-items:center;gap:5mm}
+.cover .top .ring{width:20mm;height:20mm}
+.cover .top b{display:block;font-family:var(--f-d);font-weight:800;font-size:17pt;letter-spacing:.06em;line-height:1}
+.cover .top small{font-family:var(--f-l);letter-spacing:.32em;font-size:8pt;color:#a29db3}
+.cover .tag{margin-top:28mm;font-family:var(--f-l);font-weight:700;letter-spacing:.3em;font-size:10pt;color:var(--violet);text-transform:uppercase}
+.cover h1{margin-top:5mm;font-weight:900;font-size:58pt;line-height:.86}
+.cover h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1.4px var(--violet)}
+.cover .lead{margin-top:7mm;max-width:132mm;font-size:12pt;line-height:1.5;color:#c9c5d6}
+.shots{position:absolute;left:18mm;right:18mm;bottom:40mm;display:flex;align-items:flex-end;justify-content:space-between;gap:8mm}
+.laptop{flex:none;width:128mm;border-radius:3mm;overflow:hidden;box-shadow:0 12mm 24mm -10mm rgba(0,0,0,.85)}
+.laptop img{display:block;width:100%}
+.phone{flex:none;width:36mm;border-radius:5mm;overflow:hidden;box-shadow:0 10mm 20mm -8mm rgba(0,0,0,.9),0 0 14mm -5mm rgba(168,85,247,.55)}
+.phone img{display:block;width:100%}
+.cover .meta{position:absolute;left:18mm;right:18mm;bottom:14mm;display:flex;justify-content:space-between;align-items:flex-end;gap:10mm;border-top:.3mm solid #2a2638;padding-top:5mm}
+.cover .meta div{font-family:var(--f-l);text-transform:uppercase;letter-spacing:.14em;font-size:8pt;color:#a29db3}
+.cover .meta b{display:block;margin-top:1mm;font-family:var(--f-b);text-transform:none;letter-spacing:0;font-size:11pt;color:#f3f1f7;font-weight:600}
+.cover .meta .url b{color:var(--neon)}
+
+/* ---------- Resumen ---------- */
+.h2{font-weight:900;font-size:34pt}
+.intro{margin-top:6mm;font-size:11.5pt;line-height:1.55;color:#3b374a;max-width:160mm}
+.goals{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:8mm}
+.goal{border-top:.8mm solid var(--violet);padding-top:4mm}
+.goal:nth-child(2){border-color:#3b82f6}.goal:nth-child(3){border-color:var(--neon)}
+.goal h3{font-size:16pt;font-weight:800}
+.goal p{margin-top:2.5mm;font-size:9.8pt;line-height:1.5;color:#4a465a}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:10mm;border:.3mm solid var(--line);border-radius:3mm;background:#fff;overflow:hidden}
+.num{padding:5mm 5mm 4.5mm;border-right:.3mm solid var(--line);border-bottom:.3mm solid var(--line)}
+.num:nth-child(3n){border-right:0}.num:nth-child(n+4){border-bottom:0}
+.num b{display:block;font-family:var(--f-d);font-weight:800;font-size:25pt;line-height:1;color:var(--ink2);font-variant-numeric:tabular-nums}
+.num span{display:block;margin-top:1.5mm;font-family:var(--f-l);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:8.6pt;color:var(--mute);line-height:1.3}
+.wide{margin-top:8mm;border-radius:3mm;overflow:hidden;background:var(--ink)}
+.wide{height:66mm}
+.wide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.cap{margin-top:2.5mm;font-size:8.5pt;color:var(--mute)}
+
+/* ---------- Funcionalidades ---------- */
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:7mm 7mm;margin-top:8mm}
+.feat .img{border-radius:2.5mm;overflow:hidden;aspect-ratio:16/9.6;background:var(--ink)}
+.feat .img img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.feat .t{display:flex;align-items:baseline;gap:2.5mm;margin-top:3.2mm}
+.feat .t i{font-style:normal;font-family:var(--f-d);font-weight:800;font-size:12pt;color:var(--violet-d);font-variant-numeric:tabular-nums}
+.feat h3{font-size:14.5pt;font-weight:800}
+.feat p{margin-top:1.5mm;font-size:9.3pt;line-height:1.45;color:#4a465a}
+
+/* ---------- Inversión ---------- */
+.price-page{background:var(--paper)}
+.pbox{margin-top:8mm;border-radius:4mm;overflow:hidden;background:radial-gradient(70% 90% at 100% 0%,rgba(168,85,247,.35),transparent 70%),var(--ink);color:#f3f1f7;display:grid;grid-template-columns:1.05fr 1fr}
+.pbox .l{padding:9mm 8mm}
+.pbox .l small{font-family:var(--f-l);font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:9pt;color:var(--violet)}
+.pbox .l h3{margin-top:2.5mm;font-size:21pt;font-weight:800}
+.pbox .amount{margin-top:7mm;font-family:var(--f-d);font-weight:900;font-size:44pt;line-height:.9;letter-spacing:.01em}
+.pbox .amount em{font-style:normal;font-family:var(--f-l);font-size:15pt;font-weight:700;color:#a29db3;margin-right:1.5mm;letter-spacing:.06em}
+.pbox .once{margin-top:2.5mm;font-family:var(--f-l);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:9pt;color:var(--neon)}
+.pbox .usd{margin-top:1.5mm;font-size:9pt;color:#a29db3}
+.pbox .r{padding:9mm 8mm 9mm 0}
+.pbox ul{list-style:none;margin:0;padding:0;display:grid;gap:2.6mm}
+.pbox li{display:flex;gap:3mm;font-size:9.8pt;line-height:1.4;color:#dcd8e6}
+.pbox li::before{content:"";flex:none;width:3.2mm;height:3.2mm;margin-top:1mm;border-radius:50%;background:var(--neon);box-shadow:0 0 3mm rgba(62,230,138,.7)}
+.opt-title{margin-top:10mm;font-size:17pt;font-weight:800}
+table{width:100%;border-collapse:collapse;margin-top:4mm;font-size:9.8pt}
+th{text-align:left;font-family:var(--f-l);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:8pt;color:var(--mute);padding:0 0 2.5mm;border-bottom:.4mm solid var(--ink2)}
+td{padding:3.6mm 0;border-bottom:.3mm solid var(--line);vertical-align:top;line-height:1.4}
+td b{font-weight:600;color:var(--ink2)}
+td small{display:block;color:var(--mute);font-size:8.8pt;margin-top:.8mm}
+td.v{text-align:right;white-space:nowrap;font-family:var(--f-d);font-weight:800;font-size:13.5pt;padding-left:6mm;font-variant-numeric:tabular-nums}
+td.v span{display:block;font-family:var(--f-l);font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.note{margin-top:5mm;font-size:8.6pt;color:var(--mute);line-height:1.5}
+
+/* ---------- Recorrido 360 ---------- */
+.addon{display:inline-block;margin-top:5mm;font-family:var(--f-l);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:8.5pt;color:#fff;background:var(--violet-d);padding:1.6mm 3.4mm;border-radius:99px}
+.tour-img{margin-top:7mm;border-radius:3mm;overflow:hidden;background:var(--ink);height:84mm}
+.tour-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:8mm}
+.how div{border-top:.8mm solid var(--violet);padding-top:3.5mm}
+.how div:nth-child(2){border-color:#3b82f6}.how div:nth-child(3){border-color:var(--neon)}
+.how i{font-style:normal;font-family:var(--f-d);font-weight:800;font-size:11pt;color:var(--violet-d)}
+.how h3{margin-top:1mm;font-size:14pt;font-weight:800}
+.how p{margin-top:2mm;font-size:9.3pt;line-height:1.45;color:#4a465a}
+.addon-price{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:9mm}
+.ap{border-radius:3mm;padding:5.5mm 6mm}
+.ap small{display:block;font-family:var(--f-l);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:8pt}
+.ap b{display:block;margin-top:2mm;font-family:var(--f-d);font-weight:900;font-size:25pt;line-height:1;font-variant-numeric:tabular-nums}
+.ap b em{font-style:normal;font-family:var(--f-l);font-size:11pt;font-weight:700;margin-right:1.2mm}
+.ap span{display:block;margin-top:1.5mm;font-size:8.8pt}
+.ap.one{background:#fff;border:.3mm solid var(--line)}
+.ap.one small{color:var(--violet-d)}.ap.one span{color:var(--mute)}
+.ap.two{background:radial-gradient(90% 120% at 100% 0%,rgba(168,85,247,.4),transparent 70%),var(--ink);color:#f3f1f7}
+.ap.two small{color:var(--neon)}.ap.two b em{color:#a29db3}.ap.two span{color:#a29db3}
+
+/* ---------- Cómo seguimos ---------- */
+.steps{margin-top:8mm;display:grid;gap:0}
+.step{display:grid;grid-template-columns:13mm 1fr;gap:4mm;padding-bottom:6mm;position:relative}
+.step::before{content:"";position:absolute;left:5.6mm;top:12mm;bottom:0;width:.5mm;background:var(--line)}
+.step:last-child::before{display:none}
+.step i{font-style:normal;display:grid;place-items:center;width:12mm;height:12mm;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--f-d);font-weight:800;font-size:13pt;box-shadow:0 0 0 .8mm #fff,0 0 0 1.3mm var(--violet)}
+.step h3{font-size:14pt;font-weight:800;margin-top:1.6mm}
+.step p{margin-top:1.4mm;font-size:9.6pt;line-height:1.45;color:#4a465a}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:3mm}
+.box{border:.3mm solid var(--line);border-radius:3mm;background:#fff;padding:5.5mm 6mm}
+.box h3{font-size:13pt;font-weight:800}
+.box ul{margin:3mm 0 0;padding-left:4.2mm;font-size:9.2pt;line-height:1.5;color:#4a465a}
+.box li+li{margin-top:1.2mm}
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:14mm;margin-top:16mm}
+.sign div{border-top:.35mm solid var(--ink2);padding-top:2.5mm;font-family:var(--f-l);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:8.5pt;color:var(--mute)}
+.sign b{display:block;font-family:var(--f-b);text-transform:none;letter-spacing:0;font-size:10.5pt;color:var(--ink2);font-weight:600;margin-bottom:.5mm}
+</style>
+</head>
+<body>
+
+<!-- 1 · Portada -->
+<section class="page cover">
+  <div class="top">
+    <div class="ring"><img src="capturas/logo.png" alt=""></div>
+    <div><b>LA GAMBETA</b><small>— GYM —</small></div>
+  </div>
+  <p class="tag">Propuesta comercial · Octubre 2026</p>
+  <h1>Página web<br><em>La Gambeta Gym</em></h1>
+  <p class="lead">Un sitio hecho a medida para mostrar el gym con fotos reales, informar precios y horarios, y convertir cada visita en una consulta por WhatsApp.</p>
+  <div class="shots">
+    <div class="laptop"><img src="capturas/hero.jpg" alt="Portada de la página en computadora"></div>
+    <div class="phone"><img src="capturas/phone-hero.jpg" alt="Portada de la página en el celular"></div>
+  </div>
+  <div class="meta">
+    <div>Preparado por<b>Lic. Humberto Rodríguez</b></div>
+    <div class="url">Demo en línea<b>lagambetagym.netlify.app</b></div>
+    <div>Para<b>La Gambeta Gym · Pdte. Franco</b></div>
+  </div>
+</section>
+
+<!-- 2 · Resumen -->
+<section class="page">
+  <p class="eyebrow">La propuesta</p>
+  <h2 class="h2">Una página que trabaja<br>para el gym</h2>
+  <p class="intro">La página ya está desarrollada y funcionando en una versión de demostración. Reúne en un solo lugar lo que hoy está repartido entre historias destacadas de Instagram: planes, horarios, clases, cafetería, ubicación y opiniones, con un diseño propio que refleja las luces y el estilo del local.</p>
+  <div class="goals">
+    <div class="goal"><h3>Mostrar el gym</h3><p>Fotos reales del local en galerías 3D, la identidad del logo y las luces LED del techo.</p></div>
+    <div class="goal"><h3>Responder dudas</h3><p>Horarios con estado en vivo, precios, clases, menú de la cafetería y preguntas frecuentes, a cualquier hora.</p></div>
+    <div class="goal"><h3>Sumar inscripciones</h3><p>Cada plan abre WhatsApp con el plan y el precio ya escritos. El interesado solo tiene que enviar.</p></div>
+  </div>
+  <div class="nums">
+    <div class="num"><b>12</b><span>secciones</span></div>
+    <div class="num"><b>23</b><span>fotos reales del local y de la cafetería</span></div>
+    <div class="num"><b>10</b><span>planes y consultas con mensaje de WhatsApp listo</span></div>
+    <div class="num"><b>10</b><span>reseñas reales de Google y TikTok</span></div>
+    <div class="num"><b>9</b><span>preguntas frecuentes respondidas</span></div>
+    <div class="num"><b>1,9 MB</b><span>carga rápida con datos móviles</span></div>
+  </div>
+  <div class="wide"><img src="capturas/planes-wide.jpg" alt="Sección de planes"></div>
+  <p class="cap">Sección de planes: al tocar un precio se abre WhatsApp con el pedido armado.</p>
+  <div class="foot"><span>La Gambeta Gym · Propuesta de página web</span><span>2</span></div>
+</section>
+
+<!-- 3 · Funcionalidades (1) -->
+<section class="page">
+  <p class="eyebrow">Qué incluye</p>
+  <h2 class="h2">Funcionalidades</h2>
+  <div class="feats">
+    <div class="feat"><div class="img"><img src="capturas/hero.jpg" alt=""></div><div class="t"><i>01</i><h3>Portada con identidad</h3></div><p>Logo en 3D, túnel de luces animado inspirado en el techo del local, calificación de Google y accesos directos a WhatsApp, planes y clases.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/nosotros.jpg" alt=""></div><div class="t"><i>02</i><h3>Presentación del gym</h3></div><p>Mazo de fotos en 3D que se baraja solo y números que se animan: horario, niveles, disciplinas y calificación.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/local.jpg" alt=""></div><div class="t"><i>03</i><h3>Galería 3D y Sala de Poses</h3></div><p>Galería del local que se gira con el dedo, y la Sala de Poses presentada como una habitación en 3D.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/horarios.jpg" alt=""></div><div class="t"><i>04</i><h3>Horarios en vivo</h3></div><p>Indica si el gym está abierto o cerrado en ese momento, según la hora de Paraguay, y resalta el día actual.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/planes-hover.jpg" alt=""></div><div class="t"><i>05</i><h3>Planes que venden por WhatsApp</h3></div><p>Todos los aranceles. Cada plan abre WhatsApp con el pedido escrito, y los estudiantes consultan su tarifa preferencial.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/actividades.jpg" alt=""></div><div class="t"><i>06</i><h3>Actividades y clases</h3></div><p>Musculación, spinning, GAP y funcional, con tarjetas que se inclinan en 3D.</p></div>
+  </div>
+  <div class="foot"><span>La Gambeta Gym · Propuesta de página web</span><span>3</span></div>
+</section>
+
+<!-- 4 · Funcionalidades (2) -->
+<section class="page">
+  <p class="eyebrow">Qué incluye</p>
+  <h2 class="h2">Funcionalidades</h2>
+  <div class="feats">
+    <div class="feat"><div class="img"><img src="capturas/equipo.jpg" alt=""></div><div class="t"><i>07</i><h3>Nuestro equipo</h3></div><p>Tarjetas para encargado, recepción, instructores, mantenimiento, limpieza y cafetería, con filtro por área. Listas para sumar fotos y nombres.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/cafe.jpg" alt=""></div><div class="t"><i>08</i><h3>La Gambeta Café</h3></div><p>Horario de atención, carrusel 3D de platos con nombre y precio, y menú completo por categorías con miniaturas.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/opiniones.jpg" alt=""></div><div class="t"><i>09</i><h3>Opiniones de Google</h3></div><p>Calificación de 4,8 estrellas, reseñas reales de clientes y enlace a las 108 opiniones en Google Maps.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/preguntas.jpg" alt=""></div><div class="t"><i>10</i><h3>Preguntas frecuentes</h3></div><p>Horarios, precios, pase diario, tarifa para estudiantes, clases, inscripción, ubicación, cafetería y tienda.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/contacto.jpg" alt=""></div><div class="t"><i>11</i><h3>Contacto y ubicación</h3></div><p>WhatsApp con botón para copiar el número, cómo llegar con Google Maps, Instagram y La Gambeta Store.</p></div>
+    <div class="feat"><div class="img"><img src="capturas/movil.jpg" alt=""></div><div class="t"><i>12</i><h3>Celular y redes</h3></div><p>Se adapta a cualquier pantalla, con botón flotante de WhatsApp. Al compartir el enlace aparecen el logo y una foto del gym.</p></div>
+  </div>
+  <div class="foot"><span>La Gambeta Gym · Propuesta de página web</span><span>4</span></div>
+</section>
+
+<!-- 5 · Inversión -->
+<section class="page price-page">
+  <p class="eyebrow">Inversión</p>
+  <h2 class="h2">Precio de la página</h2>
+  <div class="pbox">
+    <div class="l">
+      <small>Página web completa</small>
+      <h3>La Gambeta Gym</h3>
+      <div class="amount"><em>Gs.</em>3.500.000</div>
+      <div class="once">Pago único</div>
+      <div class="usd">Aprox. USD 600 · sin costo mensual de alojamiento</div>
+    </div>
+    <div class="r">
+      <ul>
+        <li>Diseño a medida y desarrollo de las 12 secciones y las 12 funcionalidades.</li>
+        <li>Carga de contenido: fotos, planes, horarios, menú de la cafetería, reseñas y preguntas.</li>
+        <li>Publicación en internet con conexión segura (https) y alojamiento en Netlify sin costo mensual.</li>
+        <li>Ajustes para completar los datos pendientes durante 30 días.</li>
+        <li>Video instructivo con subtítulos sobre cómo funciona la página.</li>
+        <li>Soporte por WhatsApp durante los primeros 30 días.</li>
+      </ul>
+    </div>
+  </div>
+  <h3 class="opt-title">Opcionales</h3>
+  <table>
+    <thead><tr><th>Servicio</th><th style="text-align:right">Valor</th></tr></thead>
+    <tbody>
+      <tr><td><b>Dominio propio</b><small>Por ejemplo lagambetagym.com, a nombre del gym. La configuración está incluida.</small></td><td class="v">Gs. 100.000<span>por año, aprox.</span></td></tr>
+      <tr><td><b>Mantenimiento mensual</b><small>Hasta 6 cambios por mes: precios, promociones, fotos, horarios, equipo y reseñas. Revisión del sitio y soporte por WhatsApp.</small></td><td class="v">Gs. 250.000<span>por mes</span></td></tr>
+      <tr><td><b>Recorrido virtual 360°</b><small>Recorrido por el local zona por zona, mirando en todas direcciones. Detalle en la página 6.</small></td><td class="v">Gs. 800.000<span>pago único</span></td></tr>
+      <tr><td><b>Sección La Gambeta Store</b><small>Catálogo de ropa y suplementos con pedido por WhatsApp.</small></td><td class="v">Gs. 600.000<span>pago único</span></td></tr>
+      <tr><td><b>Grilla semanal de clases</b><small>Días y horarios de spinning, GAP y funcional, con el instructor de cada clase.</small></td><td class="v">Gs. 300.000<span>pago único</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note">Valores en guaraníes. Equivalencia en dólares calculada con USD 1 ≈ Gs. 5.800 (octubre de 2026). El costo del dominio depende del registrador y se paga directamente a nombre del gym.</p>
+  <div class="foot"><span>La Gambeta Gym · Propuesta de página web</span><span>5</span></div>
+</section>
+
+<!-- 6 · Recorrido 360 (complemento) -->
+<section class="page">
+  <p class="eyebrow">Complemento opcional</p>
+  <h2 class="h2">Recorrido virtual 360°</h2>
+  <p class="intro">Se puede agregar a la página un recorrido por el gym como si el visitante estuviera adentro. Gira la vista en todas direcciones, mira el techo y el piso, y pasa de una zona a otra con un toque, desde la computadora o el celular.</p>
+  <span class="addon">Se puede agregar en cualquier momento</span>
+  <div class="tour-img"><img src="capturas/tour360.jpg" alt="Visor del recorrido virtual"></div>
+  <p class="cap">Prototipo del visor armado con las fotos actuales. Con fotos 360° la vista gira completa.</p>
+  <div class="how">
+    <div><i>01</i><h3>Fotos 360° del local</h3><p>Se toma una foto o video 360° en el centro de cada zona, con las luces encendidas y poca gente.</p></div>
+    <div><i>02</i><h3>Armado del recorrido</h3><p>Se unen las zonas con puntos para avanzar: fachada, recepción, sala principal, peso libre, entrepiso, cardio y cafetería.</p></div>
+    <div><i>03</i><h3>Publicación</h3><p>Se suma a la página como una sección más, con pantalla completa y recorrido automático.</p></div>
+  </div>
+  <div class="addon-price">
+    <div class="ap one"><small>Solo el recorrido</small><b><em>Gs.</em>800.000</b><span>Pago único · se agrega a la página publicada</span></div>
+    <div class="ap two"><small>Página + recorrido 360°</small><b><em>Gs.</em>4.300.000</b><span>Pago único · todo junto</span></div>
+  </div>
+  <div class="foot"><span>La Gambeta Gym · Propuesta de página web</span><span>6</span></div>
+</section>
+
+<!-- 7 · Cómo seguimos -->
+<section class="page">
+  <p class="eyebrow">Próximos pasos</p>
+  <h2 class="h2">Cómo seguimos</h2>
+  <div class="steps">
+    <div class="step"><i>1</i><div><h3>Aprobación y anticipo</h3><p>Se aprueba la propuesta y se abona el 50%: Gs. 1.750.000.</p></div></div>
+    <div class="step"><i>2</i><div><h3>Completar los datos</h3><p>El gym envía fotos y nombres del equipo, precios pendientes y horarios de clases. La carga lleva de 3 a 5 días hábiles desde que llega la información. Si se suma el recorrido 360°, se coordina la toma de fotos del local.</p></div></div>
+    <div class="step"><i>3</i><div><h3>Publicación final</h3><p>Revisión conjunta, publicación definitiva y conexión del dominio propio si se elige. Se abona el saldo del 50%: Gs. 1.750.000.</p></div></div>
+    <div class="step"><i>4</i><div><h3>Entrega y acompañamiento</h3><p>Entrega del video instructivo y soporte por WhatsApp durante 30 días.</p></div></div>
+  </div>
+  <div class="cols">
+    <div class="box"><h3>Para completar con el gym</h3><ul>
+      <li>Fotos y nombres del equipo, y confirmar los puestos.</li>
+      <li>Precios del sándwich proteico, la hamburguesa fit y el waffle.</li>
+      <li>Días y horarios de spinning, GAP y funcional.</li>
+      <li>Si la cafetería abre los sábados.</li>
+      <li>Estacionamiento, formas de pago y clase de prueba, para las preguntas frecuentes.</li>
+    </ul></div>
+    <div class="box"><h3>Condiciones</h3><ul>
+      <li>Validez de la propuesta: 15 días.</li>
+      <li>Formas de pago: transferencia bancaria o efectivo.</li>
+      <li>La página, los textos y las fotos quedan a nombre de La Gambeta Gym.</li>
+      <li>Cambios o secciones nuevas fuera de esta propuesta se cotizan aparte.</li>
+    </ul></div>
+  </div>
+  <div class="sign">
+    <div><b>Lic. Humberto Rodríguez</b>Desarrollo web</div>
+    <div><b>La Gambeta Gym</b>Aprobado por · Fecha</div>
+  </div>
+  <div class="foot"><span>La Gambeta Gym · Propuesta de página web</span><span>7</span></div>
+</section>
+
+</body>
+</html>

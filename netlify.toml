@@ -1,5 +1,6 @@
+# Netlify publica solo la carpeta public/. Las fuentes, la propuesta y los entregables no quedan en el sitio.
 [build]
-  publish = "."
+  publish = "public"
 
 [[headers]]
   for = "/*"

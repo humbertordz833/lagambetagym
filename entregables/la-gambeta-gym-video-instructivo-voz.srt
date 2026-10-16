@@ -1,0 +1,100 @@
+1
+00:00:00,300 --> 00:00:04,090
+Te mostramos cómo funciona la página web de La Gambeta Gym.
+
+2
+00:00:04,320 --> 00:00:09,950
+Esta es la portada: el logo en 3D, la calificación de Google y los botones principales.
+
+3
+00:00:12,290 --> 00:00:16,750
+Desde acá podés escribir por WhatsApp o ir directo a los planes y precios.
+
+4
+00:00:18,020 --> 00:00:21,450
+Abajo están las clases: spinning, GAP y funcional.
+
+5
+00:00:23,770 --> 00:00:27,380
+El menú de arriba te lleva a cada sección de la página.
+
+6
+00:00:33,780 --> 00:00:38,770
+Esta sección presenta el gym: los números se animan y las fotos se barajan solas.
+
+7
+00:00:39,580 --> 00:00:43,930
+Con el mouse el mazo se inclina, y con un toque pasa a la siguiente foto.
+
+8
+00:00:44,930 --> 00:00:49,450
+La galería del local gira en 3D: se arrastra con el mouse o con el dedo.
+
+9
+00:00:50,990 --> 00:00:53,700
+Y tocando una foto, se abre en grande.
+
+10
+00:00:58,950 --> 00:01:02,960
+Los horarios te muestran si el gym está abierto en este momento.
+
+11
+00:01:05,690 --> 00:01:11,420
+En Planes están todos los precios. Tocás un plan y se abre WhatsApp con el mensaje ya escrito.
+
+12
+00:01:14,860 --> 00:01:18,310
+Los estudiantes consultan su tarifa preferencial.
+
+13
+00:01:19,230 --> 00:01:23,430
+Actividades presenta la sala de musculación y las clases grupales.
+
+14
+00:01:27,520 --> 00:01:32,640
+El equipo tiene un lugar para cada persona: recepción, instructores, mantenimiento y más.
+
+15
+00:01:32,670 --> 00:01:37,760
+Podés filtrar por área, y las fotos y nombres se completan cuando el gym los confirme.
+
+16
+00:01:39,700 --> 00:01:44,860
+La cafetería muestra su horario y los platos en un carrusel 3D, con nombre y precio.
+
+17
+00:01:45,160 --> 00:01:49,000
+Cada foto se abre en grande, y abajo está el menú completo.
+
+18
+00:01:58,880 --> 00:02:04,570
+Las opiniones muestran el 4,8 de Google y lo que dicen quienes entrenan en La Gambeta.
+
+19
+00:02:09,090 --> 00:02:13,650
+Las preguntas frecuentes responden lo más consultado, con un solo toque.
+
+20
+00:02:16,050 --> 00:02:20,500
+Y en Contacto: WhatsApp, cómo llegar con Google Maps, Instagram y la tienda.
+
+21
+00:02:24,280 --> 00:02:27,710
+En el celular, la página se adapta sola a la pantalla.
+
+22
+00:02:28,680 --> 00:02:31,860
+Los planes se piden por WhatsApp con un solo toque.
+
+23
+00:02:35,960 --> 00:02:40,010
+La cafetería, el equipo y las opiniones se recorren con el dedo.
+
+24
+00:02:43,870 --> 00:02:46,680
+Y el botón de WhatsApp queda siempre a mano.
+
+25
+00:02:48,330 --> 00:02:50,740
+La Gambeta Gym. Más que un gym.
+
